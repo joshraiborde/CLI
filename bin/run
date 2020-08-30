@@ -1,11 +1,5 @@
 #!/usr/bin/env ruby
 
-
-#require_relative "../lib/cli"
 require "./lib/environment.rb"
 
 CLI.new.greeting
-
-#CLI.new.start
-
-#Scraper.get_events
