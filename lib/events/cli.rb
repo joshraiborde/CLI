@@ -19,7 +19,9 @@ class CLI
     def greeting
         puts "Welcome to the Lexington Community Events page."
         puts "Please select an event:"
+        puts "Please wait while the events are loading..."
         puts "---------------------------"
+        sleep(4)
         CLI.start
     end
 
