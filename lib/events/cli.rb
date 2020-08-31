@@ -4,13 +4,13 @@ class CLI
         Scraper.get_events
         Scraper.create_events
         self.display_events
-        puts "Choose an event."
+        puts "Choose an event between 1 and #{Events.all.length}."
         input = gets.chomp.to_i
         if input > 0 && input < Events.all.length
             self.show_event(input)
         else 
             puts "Invalid selection.\n"
-            puts "Choose another event."
+            puts "Please choose an event between 1 and #{Events.all.length}."
             input = gets.chomp.to_i
             self.show_event(input)
         end
@@ -32,6 +32,7 @@ class CLI
     def self.show_event(index)
         chosen_event = Events.all.find{|event| index == event.index}
         puts "You have selected: #{index}. #{chosen_event.name}"
+        puts "The date(s) for the event is/are:"
         puts chosen_event.date
     end
 end
