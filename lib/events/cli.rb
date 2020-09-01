@@ -4,7 +4,8 @@ class CLI
         Scraper.get_events
         Scraper.create_events
         self.display_events
-        puts "Choose an event between 1 and #{Events.all.length}."
+        puts "----------------------------------------------------------------"
+        puts "Please select an event between 1 and #{Events.all.length}."
         input = gets.chomp.to_i
         if input > 0 && input < Events.all.length
             self.show_event(input)
@@ -18,9 +19,8 @@ class CLI
 
     def greeting
         puts "Welcome to the Lexington Community Events page."
-        puts "Please select an event:"
         puts "Please wait while the events are loading..."
-        puts "---------------------------"
+        puts "----------------------------------------------------------------"
         sleep(4)
         CLI.start
     end
