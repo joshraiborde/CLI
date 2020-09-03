@@ -3,7 +3,7 @@ class CLI
     def self.start
         Scraper.get_events
         Scraper.create_events
-        self.display_events
+        Events.display_events
         puts "----------------------------------------------------------------"
         puts "Please select an event between 1 and #{Events.all.length}."
         input = gets.chomp.to_i
@@ -21,18 +21,12 @@ class CLI
         puts "Welcome to the Lexington Community Events page."
         puts "Please wait while the events are loading..."
         puts "----------------------------------------------------------------"
-        sleep(4)
+        sleep(2)
         CLI.start
     end
 
-    def self.display_events
-        Events.all.each do |event|
-            puts "#{event.index}. #{event.name.strip}"
-        end
-    end
-
     def self.show_event(index)
-        chosen_event = Events.all.find{|event| index == event.index}
+        chosen_event = Events.find_chosen_event(index)
         puts "You have selected: #{index}. #{chosen_event.name}"
         puts "The date(s) for the event is/are:"
         puts chosen_event.date
