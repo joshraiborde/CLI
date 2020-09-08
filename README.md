@@ -5,9 +5,6 @@ It's called CLI.
 CLI stands for Command Line Interface.
 This gem is allows you to use cli to find out the what events are happening in and around Lexington County.
 
-
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Add this line to your application's Gemfile:
