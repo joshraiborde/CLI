@@ -1,6 +1,10 @@
 # CLI
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/CLI`. To experiment with that code, run `bin/console` for an interactive prompt.
+This is the first project for Flatiron.
+It's called CLI.
+CLI stands for Command Line Interface.
+This gem is allows you to use cli to find out the what events are happening in and around Lexington County.
+
 
 TODO: Delete this and the text above, and describe your gem
 
@@ -22,7 +26,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To start the app, make sure you're in the bin directory, type into the terminal "bin/run"
+A couple of messages will be displayed, welcoming you to the app
+and you will be asked to wait while all the events are being loaded.
+
+After all the numbered events are loaded, you are asked to make a selection within the range that is displayed.
+The range is a dynamic number, meaning it will change, depending on if events have already past and if more events are added to the calendar of events.
+
+Type in a number of the event that you would like to know the date(s) of and  press "enter"
+The app will display the event and the date(s) of the event. 
+
+That is the end of the app.
+
+After the app has displayed the event, you can type in "bin/run" if you want to start over again.
 
 ## Development
 
